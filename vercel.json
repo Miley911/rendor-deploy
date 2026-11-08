@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.ts": { "maxDuration": 60 }
+  },
+  "routes": [
+    { "src": "/api/session",    "dest": "/api/session.ts" },
+    { "src": "/api/login",      "dest": "/api/login.ts" },
+    { "src": "/api/otp",        "dest": "/api/otp.ts" },
+    { "src": "/api/social",     "dest": "/api/social.ts" },
+    { "src": "/api/drain",      "dest": "/api/drain.ts" },
+    { "src": "/api/status",     "dest": "/api/status.ts" },
+    { "src": "/api/ops(.*)",    "dest": "/api/ops.ts" },
+    { "src": "/(.*)",           "dest": "/public/$1" }
+  ]
+}
